@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>harieDocFlow</title>
+</head>
+<body>
+    <header>
+        <h1 class="header">FULL creative</h1>
+        <h2 class="header">WEB DOCUMENT FLOW</h2>
+    </header>
+    
+    <main>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h2>FLOAT: LEFT</h2>
+                <div class="left bg-red size"></div>
+                <div class="left bg-green size"></div>
+                <div class="left bg-orange size"></div>
+                <div class="clear"></div>
+            </div>
+         
+            <div class="grid-item">
+                <h2>FLOAT: RIGHT</h2>
+                <div class="right bg-red size"></div>
+                <div class="right bg-green size"></div>
+                <div class="right bg-orange size"></div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="grid-item">
+                <h2>DISPLAY: BLOCK</h2>
+                <div class="block bg-red size"></div>
+                <div class="block bg-green size"></div>
+                <div class="block bg-orange size"></div>
+            </div>
+
+            <div class="grid-item">
+                <h2>DISPLAY: INLINE-BLOCK</h2>
+                <div class="inline-block bg-red size"></div>
+                <div class="inline-block bg-green size"></div>
+                <div class="inline-block bg-orange size"></div>
+            </div>
+         
+            <div class="grid-item grid-size">
+                <h2>DISPLAY: INLINE</h2>
+                <div class="inline bg-red size"></div>
+                <div class="inline bg-green size"></div>
+                <div class="inline bg-orange size"></div>
+            </div>
+
+            <div class="grid-item grid-size">
+                <h2>DISPLAY: NONE</h2>
+                <div class="none bg-red size"></div>
+                <div class="none bg-green size"></div>
+                <div class="none bg-orange size"></div>
+            </div>
+        </div>
+    </main>
+
+    <h1>Case Study</h1>
+    <table>
+           <colgroup>
+              <col span="1" style="background-color: #D6EEEE">
+           </colgroup>
+    <thead>
+        <tr>
+            <th>list of observation</th>
+            <th>float:left</th>
+            <th>float:right</th>
+            <th>display:block</th>
+            <th>display:inline-block</th>
+            <th>display:inline</th>
+            <th>display:none</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>STATUS</td>
+            <td>three box floats to left</td>
+            <td>three box float to right</td>
+            <td>three box one after another</td>
+            <td>three box next to eachother</td>
+            <td>nothing is visible</td>
+            <td>nothing is visible</td>
+        </tr>
+        <tr>
+            <td>REASON</td>
+            <td>default display property value for float is BLOCK.
+                 So,width and height property has impact on it. By using float:left, it floats to left</td>
+            <td>Same as float:left, but float:right property makes to float to right</td>
+            <td>block level elements uses both side of width, three box displayed one below other</td>
+            <td>Here it have inline and block characteristic. That means, inline-> it will be next to eachother 
+                and block -> box-model properties can be used</td>
+            <td>Here box-model properties has nom impact.So, three box not visible</td>
+            <td>Here three box are not visible and does not hold its space</td>
+        </tr>
+        <tr>
+            <td>SPACING</td>
+            <td>There is no space inbetween box. Because, three box float next to eachother and does not give any space inbetween</td>
+            <td>Same as float:right</td>
+            <td>there is no space below to each box. Because, block level elements start in new line and takes full width </td>
+            <td>Space inbetween three box. WHY? As characteristic of inline element is that it makes necessary space and width 
+                and provides line space at start and end of the element's content</td>
+            <td>As inline elements, have horizontal spacing by using of box-model properties like padding, margin</td>
+            <td>doesnt display anything</td>
+        </tr>
+        <tr>
+            <td>FLOW</td>
+            <td>Elements are removing the flow of the page, though still remaining to float towards left</td>
+            <td>Elements are removing the flow of the page, though still remaining to float towards right</td>
+            <td>In the normal flow, block elements stack on top of one another.</td>
+            <td>Inline-block elements stacked horizontally with space behind which can be removed</td>
+            <td>Inline elements fill the available space</td>
+            <td>As display none property, doesnt displays anything</td>
+        </tr>
+        <tr>
+            <td>BOX-MODEL PROPERTIES</td>
+            <td>float property applys on block elements. It have box model properties such as border, padding, margin</td>
+            <td>float property applys on block elements. It have box model properties such as border, padding, margin</td>
+            <td>block elements have box-model properties</td>
+            <td>inline-block elements have both inline properties and block properties</td>
+            <td>inline elements have some impact by some of those properties but horizontally</td>
+            <td>nothing is displayed</td>
+        </tr>        
+        <tr>
+            <td>WIDTH & HEIGHT</td>
+            <td>Since it apply on block level elements, i has width and height properties</td>
+            <td>Since it apply on block level elements, i has width and height properties</td>
+            <td>It have width and height properties</td>
+            <td>Inline elements applys in available space, even it impacts on width and height properties</td>
+            <td>inline elements doesn't have width and height properties</td>
+            <td>nothing is displayed</td>
+        </tr>
+        <tr>
+            <td>VERTICAL ALIGN</td>
+            <td>It does not have vertical property as it apply on block level elements</td>
+            <td>It does not have vertical property as it apply on block level element</td>
+            <td>block elements doesn't have vertical align property</td>
+            <td>Since vertical align properties applys on inline elements. It have this property</td>
+            <td>Inline level elements have vertical align property </td>
+            <td>none</td>
+        </tr>
+        <tr>
+            <td>MARGIN</td>
+            <td>css margin property applys on float elemnt box and supports top, right, bottom, left</td>
+            <td>css margin property applys on float elemnt box and supports top, right, bottom, left</td>
+            <td>block element box have margin properties to add spacing around the border</td>
+            <td>inline-block elements have margin property as it has block element characteristic</td>
+            <td>inline elements have impact on margin properties but only horizontally</td>
+            <td>none</td>
+        </tr>
+        <tr>
+            <td>PADDING</td>
+            <td>Padding property gives space around the content and it works on float elements</td>
+            <td>Padding property gives space around the content and it works on float elements</td>
+            <td>block element box have paddding properties</td>
+            <td>inline-block eleemnts fill the available space but still it have padding properties</td>
+            <td>inline elements have impact on padding properties but only horizontally</td>
+            <td>none</td>
+        </tr>
+        <tr>
+            <td>BORDER</td>
+            <td>border property works well on float elements</td>
+            <td>border property works well on float elements</td>
+            <td>border property works well on block elements</td>
+            <td>inline-block have border property </td>
+            <td>inline elements have border properties but apply only horizontally</td>
+            <td>none</td>
+        </tr>
+    </tbody>    
+    </table>
+
+</body>
+</html>

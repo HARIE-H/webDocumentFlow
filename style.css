@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+}
+
+body{background-color: lightblue; margin-top: 5vw;}
+/* default sizing and color for all box */
+
+header{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    padding: 10px;
+    position: fixed;
+    width:100%;
+    top: 0px;
+}
+.header{
+    display: inline;
+    color: white;
+    font-size: 2vw;
+}
+h1.header{
+    margin-right: 60%;
+}
+
+/* grid container styling */
+.grid-item{
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #555;
+    margin: 3vw;
+}
+h2{
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    grid-row-gap: 10px;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+.grid-size{
+    height: 300px;
+}
+
+/* styling heading */
+div > h2{
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: #fff;
+}
+
+.size{width: 10vw;height:10vw;}
+.bg-red{background-color: red;}
+.bg-green{background-color: green;}
+.bg-orange{background-color: orange;}
+
+/* float:left div */
+.left{float:left;}
+.clear{clear:both;}
+
+/* float:right div */
+.right{float:right;}
+
+/* display: block div */
+.block{display: block;}
+
+/* display:inline-block div*/
+.inline-block{display: inline-block; vertical-align: middle;}
+
+/* display: inline div */
+.inline{display: inline;}
+
+/* display: none div */
+.none{display: none;}
+
+
+
+/* table styling */
+h1{
+    text-align: center;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+ th, td{
+    border: 1px solid black;
+    text-align: center;
+}
+th{
+    font-size:larger;
+    background-color: grey;
+}
+td{
+    padding: 5px;
+}
+
+
+@media screen and (max-width: 600px) {
+    body{
+        margin-top: 70px;
+    }
+    .header{
+      display: block;
+      text-align: center;
+      font-size: large;
+      width: 100%;
+    }
+    .grid-container{
+        grid-template-columns: repeat(1,1fr);
+        grid-row-gap: 5px;
+    }
+
+  }
